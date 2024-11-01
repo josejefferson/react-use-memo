@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ComMemo from './ComMemo'
+import ComMemoDependenciasExtras from './ComMemoDependenciasExtras'
+import ComMemoSemDependencias from './ComMemoSemDependencias'
+import SemMemo from './SemMemo'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div style={{ border: 'black 1px solid', padding: '10px', marginTop: '20px' }}>
+        <SemMemo />
+      </div>
 
-export default App;
+      <div style={{ border: 'black 1px solid', padding: '10px', marginTop: '20px' }}>
+        <ComMemo />
+      </div>
+
+      <details style={{ marginTop: '20px' }}>
+        <summary>Mais exemplos</summary>
+
+        <div style={{ border: 'black 1px solid', padding: '10px', marginTop: '20px' }}>
+          <ComMemoSemDependencias />
+        </div>
+
+        <div style={{ border: 'black 1px solid', padding: '10px', marginTop: '20px' }}>
+          <ComMemoDependenciasExtras />
+        </div>
+      </details>
+    </>
+  )
+}
