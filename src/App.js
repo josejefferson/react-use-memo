@@ -1,6 +1,7 @@
 import ComMemo from './ComMemo'
 import ComMemoDependenciasExtras from './ComMemoDependenciasExtras'
 import ComMemoSemDependencias from './ComMemoSemDependencias'
+import Exercicio from './Exercicio'
 import SemMemo from './SemMemo'
 
 export default function App() {
@@ -24,6 +25,12 @@ export default function App() {
         <div style={{ border: 'black 1px solid', padding: '10px', marginTop: '20px' }}>
           <ComMemoDependenciasExtras />
         </div>
+      </details>
+
+      <details style={{ marginTop: '20px' }}>
+        <summary>Exercício</summary>
+
+        <Exercicio />
       </details>
     </>
   )
